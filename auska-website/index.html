@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AUSKA — Onchain Extraction Protocol</title>
+<meta name="description" content="AUSKA turns real-world commodity extraction into an onchain economy of claims, yield, and refined value.">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<!-- NAV -->
+<header class="nav" id="top">
+  <div class="nav-inner">
+    <a href="#top" class="brand">
+      <img src="assets/logo.png" alt="AUSKA" class="brand-mark">
+      <span class="brand-name">AUSKA</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#protocol">Protocol</a>
+      <a href="#extractor">The Extractor</a>
+      <a href="#reserves">Reserves</a>
+      <a href="#launch">Launch</a>
+      <a href="#crew">Crew</a>
+    </nav>
+    <a href="#extractor" class="btn btn-ghost nav-cta">Start extracting</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg" style="background-image:url('assets/hero-bg.png')"></div>
+  <div class="hero-inner">
+    <p class="eyebrow">Onchain extraction protocol</p>
+    <h1>Beneath every surface<br>lies a reserve.<br><span class="accent">AUSKA reaches it.</span></h1>
+    <p class="hero-sub">
+      AUSKA takes what the world pulls out of the ground — crude, gas, ore, and refined metal —
+      and turns extraction itself into an onchain economy of claims, yield, and refined value.
+      You don't watch the tape. You break through it.
+    </p>
+    <div class="hero-ctas">
+      <a href="#extractor" class="btn btn-primary">Break ground →</a>
+      <a href="#protocol" class="btn btn-outline">Read the protocol</a>
+    </div>
+  </div>
+  <div class="ticker">
+    <div class="ticker-track" id="tickerTrack"></div>
+  </div>
+</section>
+
+<!-- THE EXTRACTOR (interactive demo) -->
+<section class="section" id="extractor">
+  <p class="eyebrow center">Utility · Demo Claim RSV-000</p>
+  <h2 class="center">Hold the line. Break through the layers.</h2>
+  <p class="section-sub center">
+    This is the toy version of the AUSKA loop. Hold the button and pressure builds.
+    Every layer you break can release a pocket of resource; the deepest layers hide the richest ones.
+    Resource converts to demo $AUSKA at the surface. On mainnet the same loop runs onchain —
+    claims are ownable, yield is real, and the leaderboard is public.
+  </p>
+
+  <div class="rig">
+    <div class="rig-main">
+      <button class="drill-btn" id="drillBtn">
+        <span class="drill-btn-label">HOLD TO BREAK THROUGH</span>
+      </button>
+      <div class="rig-stats">
+        <div class="stat">
+          <span class="stat-value" id="depthVal">0 m</span>
+          <span class="stat-label">Depth reached</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" id="resourceVal">0</span>
+          <span class="stat-label">Resource units</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" id="auskaVal">0</span>
+          <span class="stat-label">$AUSKA (demo)</span>
+        </div>
+      </div>
+      <p class="rig-hint" id="rigHint">reserve detected at ~2,200 m · keep pushing</p>
+    </div>
+
+    <div class="strata" id="strataViz">
+      <div class="strata-td">TD 3,000 m</div>
+      <div class="strata-layer" data-depth="0">0 m · Surface fill</div>
+      <div class="strata-layer" data-depth="400">400 m · Sandstone</div>
+      <div class="strata-layer" data-depth="1000">1,000 m · Shale band</div>
+      <div class="strata-layer" data-depth="1600">1,600 m · Dense rock</div>
+      <div class="strata-layer" data-depth="2200">2,200 m · Cap layer</div>
+      <div class="strata-layer reserve" data-depth="2600">2,600 m · ⛏ Reserve</div>
+      <div class="drill-indicator" id="drillIndicator"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROTOCOL / HOW IT WORKS -->
+<section class="section alt" id="protocol">
+  <p class="eyebrow center">The protocol · Surface to wallet</p>
+  <h2 class="center">Resource in. $AUSKA out.</h2>
+  <p class="section-sub center">
+    Underneath the demo is a plain three-step loop. No wrapped-wrapper tokens, no yield borrowed
+    from a yield borrowed from a yield. Three stages, all onchain, all readable by anyone.
+  </p>
+
+  <div class="steps">
+    <div class="step">
+      <span class="step-num">01</span>
+      <h3>Stake a claim</h3>
+      <p>Every claim is a unique onchain slot tied to a real extractive market — <code>WTI</code>, <code>BRENT</code>, <code>NATGAS</code>, <code>COPPER</code>, <code>URANIUM</code>, and the rest of the board. Supply per commodity is fixed. Early claimants get the richest layers; latecomers work the tailings.</p>
+    </div>
+    <div class="step">
+      <span class="step-num">02</span>
+      <h3>Break the layer</h3>
+      <p>Claims produce while you work them. Output tracks the real volatility of the underlying commodity — when the market rips or dumps, matching claims run hot and throughput multiplies. A quiet market means a slow trickle. A supply shock means every claim on the board lights up.</p>
+    </div>
+    <div class="step">
+      <span class="step-num">03</span>
+      <h3>Refine to $AUSKA</h3>
+      <p>Extracted resource settles to <strong>$AUSKA</strong> at the surface. Sell it, hold it, or burn it to deepen your claim and raise its base output — the only sink in the system, and it's a shovel. The protocol fee recipient takes a cut of every settlement to fund the reserves board.</p>
+    </div>
+  </div>
+</section>
+
+<!-- RESERVES BOARD -->
+<section class="section" id="reserves">
+  <p class="eyebrow center">The reserves board · Live demo feed</p>
+  <h2 class="center">If it comes out of the ground, it's on the board.</h2>
+  <p class="section-sub center">
+    Crude benchmarks, refined products, gas, coal, and the metals shelf — every extractive market
+    gets a claim. The board below runs on demo data; at launch it's wired to real feeds and
+    every tile is a workable claim.
+  </p>
+  <p class="board-note center">▲▼ demo quotes · refreshes ~2s · full board at mainnet: 40+ extractive markets</p>
+  <div class="board" id="reservesBoard"></div>
+</section>
+
+<!-- LAUNCH -->
+<section class="section alt" id="launch">
+  <div class="launch-grid">
+    <div class="launch-card">
+      <p class="eyebrow">The chain</p>
+      <h3>Built where retail already is</h3>
+      <p>AUSKA deploys its claims, settlement, and leaderboard on a low-fee EVM Layer-2 built for
+      everyday users — cheap blocks, instant settlement, no bridge required to get in or out.
+      One chain, one board, no detours.</p>
+    </div>
+    <div class="launch-card">
+      <p class="eyebrow">The launch</p>
+      <h3>Fair launch at the surface</h3>
+      <p><strong>$AUSKA</strong> launches through a public bonding curve — no private round, no
+      team allocation waiting behind a cliff. The curve is the only presale, and everyone stands
+      in the same mud.</p>
+      <p class="launch-warning">Contract address drops <strong>only</strong> on our official
+      channel below. Anything posted earlier is a dry claim dressed as a discovery.</p>
+    </div>
+  </div>
+  <div class="launch-flow">
+    <span>$AUSKA</span><span class="flow-arrow">→</span>
+    <span>Bonding curve</span><span class="flow-arrow">→</span>
+    <span>Mainnet</span><span class="flow-arrow">→</span>
+    <span>Claims open</span><span class="flow-arrow">→</span>
+    <span>It breaks through</span>
+  </div>
+  <div class="socials">
+    <a href="#" class="btn btn-outline">𝕏 @auska — official (add your handle)</a>
+  </div>
+</section>
+
+<!-- CREW -->
+<section class="section" id="crew">
+  <p class="eyebrow center">The crew · On shift</p>
+  <h2 class="center">Small crew. Deep reserves.</h2>
+  <p class="section-sub center">
+    No sprawling "core contributors" page, no advisors collecting tokens for a retweet.
+    A working crew stays small, stays onsite, and stays covered in the product.
+  </p>
+  <div class="crew-grid" id="crewGrid">
+    <div class="crew-card">
+      <div class="crew-avatar">?</div>
+      <p class="crew-name">Your name</p>
+      <p class="crew-role">Founder · Lead</p>
+    </div>
+    <div class="crew-card crew-open">
+      <div class="crew-avatar">+</div>
+      <p class="crew-name">Open seat</p>
+      <p class="crew-role">Crew updates posted on our official channel</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-top">
+    <a href="#top" class="brand">
+      <img src="assets/logo.png" alt="AUSKA" class="brand-mark">
+      <span class="brand-name">AUSKA</span>
+    </a>
+    <nav class="footer-links">
+      <a href="#protocol">Protocol</a>
+      <a href="#reserves">Reserves</a>
+      <a href="#launch">Launch</a>
+    </nav>
+  </div>
+
+  <div class="disclaimers">
+    <p><strong>What AUSKA is not.</strong> AUSKA does not extract, refine, transport, store, or
+    spill any physical commodity. No barrels, cubic feet, tonnes, or drums of anything are
+    produced, owned, or delivered by the protocol. Every claim, layer, and reserve here is an
+    onchain construct.</p>
+    <p><strong>Market data.</strong> Quotes shown on this page are demonstration values, not
+    sourced from any exchange or data terminal. Mainnet feeds will be documented at launch.
+    Benchmark names (WTI, Brent, and others) are references to publicly known markets, not
+    endorsements by their operators.</p>
+    <p><strong>Risk.</strong> Digital assets are volatile. Claims can run dry and curves can
+    flatten. Operate only with capital you can afford to lose. Nothing on this page is
+    investment, legal, or professional advice.</p>
+  </div>
+  <p class="footer-bottom">© 2026 AUSKA Protocol. Keep pushing.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
